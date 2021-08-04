@@ -16,8 +16,8 @@ export default function SignIn() {
                 password
             })
         }).then((response) => response.json())
-        .then(() => {
-            console.log('Success!')
+        .then((data) => {
+            console.log('Success!', data);
         })
     };
 
@@ -34,11 +34,11 @@ export default function SignIn() {
             type="email" 
             value={email}
             onChange={ handleEmailChange }
-            inputmode="email" 
+            inputMode="email" 
             autoComplete="username" />
         </fieldset>
         <fieldset>
-            <label htmlF or="password">Senha</label>
+            <label htmlFor="password">Senha</label>
             <input 
             id="password" 
             type="password"
